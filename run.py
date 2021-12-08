@@ -2,3 +2,5 @@
 
 from random import randint
 
+Class Board:
+    """"""
