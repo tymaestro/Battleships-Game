@@ -13,3 +13,5 @@ Class Board:
         self.num_ships = num_ships
         self.name = name
         self.type = type
+        self.ships = []
+        self.guesses = []
