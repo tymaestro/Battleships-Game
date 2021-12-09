@@ -15,3 +15,13 @@ Class Board:
         self.type = type
         self.ships = []
         self.guesses = []
+
+def new_game():
+    size = 8
+    num_ships = 5
+    scores["computer"] = 0
+    scores["player"] = 0
+    player_name = input("Please enter your name")
+
+
+new_game()
