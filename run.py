@@ -20,4 +20,10 @@ def print_board(board):
         print(" | ".join(row))
 
 
+# Collecting user input for name and printing opening message and board
+
+
 name = input("Ahoy Matey!\nPlease enter your name to continue:\n")
+print(f"Welcome to Battleships {name}!")
+print("Please choose co-ordinates between 0 and 5")
+print_board(board)
