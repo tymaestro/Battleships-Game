@@ -8,7 +8,7 @@ from random import randint
 Create board
 """
 
-board = [["-"] * 6 for x in range(6)]
+board = [["-" for x in range(6)] for y in range(6)]
 
 
 def print_board(board):
