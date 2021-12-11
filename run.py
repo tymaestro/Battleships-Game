@@ -22,8 +22,14 @@ def print_board(board):
 
 # Collecting user input for name and printing opening message and board
 
+def welcome(player):
+    print(f"Welcome to Battleships {player}!")
+
 
 name = input("Ahoy Matey!\nPlease enter your name to continue:\n")
-print(f"Welcome to Battleships {name}!")
+welcome(name)
+
+# name = input("Ahoy Matey!\nPlease enter your name to continue:\n")
+# print(f"Welcome to Battleships {name}!")
 print("Please choose co-ordinates between 0 and 5")
 print_board(board)
