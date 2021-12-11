@@ -39,10 +39,20 @@ print_board(board)
 
 # generate random ship locations
 
-def ship_location():
-
+def ship_location(board):
+    """
+    Generate random ship locations
+    """
+    for ship in range(6):
+        ship_row, ship_column = randint(0, 5), randint(0, 5)
+        board[ship_row][ship_column] = "X"
 
 # player guesses
 
-def player_guess():
-    
+def player_guesses(board):
+    """
+    Player guesses
+    """
+    row = input("Please choose a row: ")
+    column = input("Please choose a column")
+    print(f"You chose the co-ordinates ({row}, {column})")
