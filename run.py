@@ -9,6 +9,7 @@ Create board
 """
 
 board = [["-" for x in range(6)] for y in range(6)]
+# computer_board = [["-" for x in range(6)] for y in range(6)]
 
 
 def print_board(board):
@@ -29,7 +30,6 @@ def welcome(player):
 name = input("Ahoy Matey!\nPlease enter your name to continue:\n")
 welcome(name)
 
-# name = input("Ahoy Matey!\nPlease enter your name to continue:\n")
-# print(f"Welcome to Battleships {name}!")
+
 print("Please choose co-ordinates between 0 and 5")
 print_board(board)
