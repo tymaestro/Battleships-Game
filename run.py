@@ -24,6 +24,9 @@ def print_board(board):
 # Collecting user input for name and printing opening message and board
 
 def welcome(player):
+    """
+    welcome message for players
+    """
     print(f"Welcome to Battleships {player}!")
 
 
@@ -33,3 +36,13 @@ welcome(name)
 
 print("Please choose co-ordinates between 0 and 5")
 print_board(board)
+
+# generate random ship locations
+
+def ship_location():
+
+
+# player guesses
+
+def player_guess():
+    
