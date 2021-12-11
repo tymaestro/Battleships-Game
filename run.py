@@ -18,3 +18,6 @@ def print_board(board):
     """
     for row in board:
         print(" | ".join(row))
+
+
+name = input("Ahoy Matey!\nPlease enter your name to continue:\n")
