@@ -4,11 +4,11 @@ Import randint from random module
 
 from random import randint
 
-"""
-Create board
-"""
 
 def create_board():
+    """
+    Create board
+    """
     board = [["-" for x in range(6)] for y in range(6)]
     return board
 
@@ -54,22 +54,40 @@ def player_guesses():
     """
     Player guesses
     """
-    try:
+    row = int(input("Please enter a row number: "))
+    while row < 0 or row > 5:
+        print("Oops, please choose a row between 0 and 5!")
         row = int(input("Please enter a row number: "))
-        while row < 0 or row > 5:
-            print("Oops, please choose a row between 0 and 5!")
-            row = int(input("Please enter a row number: "))
+    column = int(input("Please enter a column number: "))
+    while column < 0 or column > 5:
+        print("Oops, please choose a column between 0 and 5!")
         column = int(input("Please enter a column number: "))
-        while column < 0 or column > 5:
-            print("Oops, please choose a column between 0 and 5!")
-            column = int(input("Please enter a column number: "))
-    except Exception:
-        print("Please enter a valid number")
-        row = int(input("Please enter a row number: "))
-    print(f"You chose the co-ordinates ({row}, {column})")
+    return f"You chose the co-ordinates ({row}, {column})"
+
+
+# def player_guesses():
+#     """
+#     Player guesses
+#     """
+#     try:
+#         row = int(input("Please enter a row number: "))
+#         while row < 0 or row > 5:
+#             print("Oops, please choose a row between 0 and 5!")
+#             row = int(input("Please enter a row number: "))
+#         column = int(input("Please enter a column number: "))
+#         while column < 0 or column > 5:
+#             print("Oops, please choose a column between 0 and 5!")
+#             column = int(input("Please enter a column number: "))
+#     except Exception:
+#         print("Please enter a valid number")
+#         row = int(input("Please enter a row number: "))
+#     print(f"You chose the co-ordinates ({row}, {column})")
 
 
 def main():
+    """
+    This is the main function for starting the game
+    """
     name = input("Ahoy Matey!\nPlease enter your name to continue:\n")
     welcome(name)
     print("Please choose co-ordinates between 0 and 5")
@@ -78,6 +96,10 @@ def main():
     print("\n\nComputer Board\n")
     print_board(computer_board)
     print(player_guesses())
+    ship_placement(player_board)
+
+
+# ship_placement(player_board)
 
 
 if __name__ == "__main__":
