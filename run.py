@@ -68,6 +68,8 @@ def player_guesses():
         row = int(input("Please enter a row number: "))
     print(f"You chose the co-ordinates ({row}, {column})")
 
+# main starter function for the game
+
 
 def main():
     """
@@ -82,9 +84,6 @@ def main():
     print("\n\nComputer Board\n")
     print_board(computer_board)
     player_guesses()
-
-
-# ship_placement(player_board)
 
 
 if __name__ == "__main__":
