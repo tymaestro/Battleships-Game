@@ -56,13 +56,16 @@ def player_guesses():
     """
     try:
         row = int(input("Please enter a row number: "))
-        while row < 0 or row > 6:
+        while row < 0 or row > 5:
             print("Oops, please choose a row between 0 and 5!")
             row = int(input("Please enter a row number: "))
+        column = int(input("Please enter a column number: "))
+        while column < 0 or column > 5:
+            print("Oops, please choose a column between 0 and 5!")
+            column = int(input("Please enter a column number: "))
     except Exception:
         print("Please enter a valid number")
-        row = int(input("Please choose a row: "))
-    column = input("Please choose a column: ")
+        row = int(input("Please enter a row number: "))
     print(f"You chose the co-ordinates ({row}, {column})")
 
 
