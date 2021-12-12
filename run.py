@@ -11,12 +11,10 @@ Create board
 def create_board():
     board = [["-" for x in range(6)] for y in range(6)]
     return board
-# computer_board = [["-" for x in range(6)] for y in range(6)]
+
 
 player_board = create_board()
 computer_board = create_board()
-
-# board = ["-"] * 6 for x in range(6)
 
 
 def print_board(board):
@@ -40,15 +38,13 @@ def welcome(player):
 def main():
     name = input("Ahoy Matey!\nPlease enter your name to continue:\n")
     welcome(name)
+    print("Please choose co-ordinates between 0 and 5")
     print("\n\nPlayer Board\n")
     print_board(player_board)
     print("\n\nComputer Board\n")
     print_board(computer_board)
     print(player_guesses(player_board))
 
-
-print("Please choose co-ordinates between 0 and 5")
-# print_board(board)
 
 # generate random ship locations
 
@@ -69,11 +65,11 @@ def player_guesses(player_board):
     try:
         row = int(input("Please choose a row: "))
         if row < 0 or row > 6:
-            row = int(input("Please choose a row: "))
+            row = int(input("Oops, please choose a row between 1 and 5! "))
     except Exception:
         print("Please enter a valid number")
         row = int(input("Please choose a row: "))
-    column = input("Please choose a column")
+    column = input("Please choose a column: ")
     print(f"You chose the co-ordinates ({row}, {column})")
 
 
