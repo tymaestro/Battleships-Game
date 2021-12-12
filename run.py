@@ -35,6 +35,37 @@ def welcome(player):
     print(f"Welcome to Battleships {player}!")
 
 
+# generate random ship locations
+
+def ship_placement(board):
+    """
+    Generate random ship locations
+    """
+    for ship in range(6):
+        ship_row, ship_column = randint(0, 5), randint(0, 5)
+        while board[ship_row][ship_column] == "X":
+            ship_row, ship_column = player_guesses()
+        board[ship_row][ship_column] = "X"
+
+# player guesses
+
+
+def player_guesses():
+    """
+    Player guesses
+    """
+    try:
+        row = int(input("Please enter a row number: "))
+        while row < 0 or row > 6:
+            print("Oops, please choose a row between 0 and 5!")
+            row = int(input("Please enter a row number: "))
+    except Exception:
+        print("Please enter a valid number")
+        row = int(input("Please choose a row: "))
+    column = input("Please choose a column: ")
+    print(f"You chose the co-ordinates ({row}, {column})")
+
+
 def main():
     name = input("Ahoy Matey!\nPlease enter your name to continue:\n")
     welcome(name)
@@ -43,34 +74,7 @@ def main():
     print_board(player_board)
     print("\n\nComputer Board\n")
     print_board(computer_board)
-    print(player_guesses(player_board))
-
-
-# generate random ship locations
-
-def ship_location(board):
-    """
-    Generate random ship locations
-    """
-    for ship in range(6):
-        ship_row, ship_column = randint(0, 5), randint(0, 5)
-        board[ship_row][ship_column] = "X"
-
-# player guesses
-
-def player_guesses(player_board):
-    """
-    Player guesses
-    """
-    try:
-        row = int(input("Please choose a row: "))
-        if row < 0 or row > 6:
-            row = int(input("Oops, please choose a row between 1 and 5! "))
-    except Exception:
-        print("Please enter a valid number")
-        row = int(input("Please choose a row: "))
-    column = input("Please choose a column: ")
-    print(f"You chose the co-ordinates ({row}, {column})")
+    print(player_guesses())
 
 
 if __name__ == "__main__":
