@@ -1,6 +1,4 @@
-"""
-Import randint from random module
-"""
+# Import randint from random module
 
 from random import randint
 
@@ -26,7 +24,7 @@ def print_board(board):
         print(" | ".join(row))
 
 
-# Collecting user input for name and printing opening message and board
+# Collecting user input for name and printing opening message
 
 def welcome(player):
     """
@@ -43,30 +41,30 @@ def ship_placement(board):
     """
     for ship in range(6):
         ship_row, ship_column = randint(0, 5), randint(0, 5)
-        while board[ship_row][ship_column] == "X":
-            ship_row, ship_column = player_guesses()
         board[ship_row][ship_column] = "X"
 
-# player guesses
+# Player guesses
 
 
-def player_guesses():
+def player_guess():
     """
     Player guesses
     """
-    try:
+    # try:
+    row = int(input("Please enter a row number: "))
+    while row < 0 or row > 5:
+        print("Oops, please choose a row between 0 and 5!")
         row = int(input("Please enter a row number: "))
-        while row < 0 or row > 5:
-            print("Oops, please choose a row between 0 and 5!")
-            row = int(input("Please enter a row number: "))
+    column = int(input("Please enter a column number: "))
+    while column < 0 or column > 5:
+        print("Oops, please choose a column between 0 and 5!")
         column = int(input("Please enter a column number: "))
-        while column < 0 or column > 5:
-            print("Oops, please choose a column between 0 and 5!")
-            column = int(input("Please enter a column number: "))
-    except ValueError:
-        print("Please enter a valid number!")
-        row = int(input("Please enter a row number: "))
+    # except ValueError:
+    #     print("Please enter a valid number!")
+    #     row = int(input("Please enter a row number: "))
     print(f"You chose the co-ordinates ({row}, {column})")
+    return int(row), int(column)
+
 
 # main starter function for the game
 
@@ -76,14 +74,15 @@ def main():
     This is the main function for starting the game
     """
     ship_placement(player_board)
-    name = input("Ahoy Matey!\nPlease enter your name to continue:\n")
+    name = input("Ahoy Matey!\nPlease enter your name to continue: ")
     welcome(name)
     print("Please choose co-ordinates between 0 and 5")
     print("\n\nPlayer Board\n")
     print_board(player_board)
     print("\n\nComputer Board\n")
     print_board(computer_board)
-    player_guesses()
+    print("\n")
+    player_guess()
 
 
 if __name__ == "__main__":
