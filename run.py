@@ -66,7 +66,19 @@ def player_guess():
     return int(row), int(column)
 
 
-# main starter function for the game
+def guess_check():
+    row, column = player_guess()
+    if computer_board[row][column] == "#":
+        print("Oops, you've already guessed those co-ordinates!")
+    elif player_board[row][column] == "X":
+        print("Congratulations, it's a direct hit!")
+        computer_board[row][column] = "X"
+    else:
+        print("Sorry, you missed this time.\nPlease try again.")
+        computer_board[row][column] = "#"
+
+
+# Main start function for the game
 
 
 def main():
@@ -82,7 +94,7 @@ def main():
     print("\n\nComputer Board\n")
     print_board(computer_board)
     print("\n")
-    player_guess()
+    guess_check()
 
 
 if __name__ == "__main__":
