@@ -81,13 +81,17 @@ def guess_check():
 # Main start function for the game
 
 
+def start_game():
+    ship_placement(player_board)
+    name = input("Ahoy Matey!\nPlease enter your name to continue: ")
+    welcome(name)
+
+
 def main():
     """
     This is the main function for starting the game
     """
-    ship_placement(player_board)
-    name = input("Ahoy Matey!\nPlease enter your name to continue: ")
-    welcome(name)
+    start_game()
     print("Please choose co-ordinates between 0 and 5")
     print("\n\nPlayer Board\n")
     print_board(player_board)
