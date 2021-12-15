@@ -152,8 +152,11 @@ def main():
         print_board(computer_board)
         print("\n")
         guess_check()
+        computer_check()
         if increment_score(computer_board) == 5:
             print("Congratulations! You sunk all the Battleships!")
+        elif increment_score(player_board) == 5:
+            print("Computer wins!")
             break
 
 
