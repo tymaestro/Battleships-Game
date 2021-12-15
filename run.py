@@ -79,6 +79,15 @@ def guess_check():
         computer_board[row][column] = "#"
 
 
+def computer_guess():
+    """
+    Function to generate random numbers for computer guess
+    """
+    for guess in range(1):
+        guess_row, guess_column = randint(0, 5), randint(0, 5)
+        return guess_row, guess_column
+
+
 def increment_score(board):
     """
     Function to increment the score by 1 each time a ship is hit
