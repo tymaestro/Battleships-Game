@@ -88,17 +88,35 @@ def computer_guess():
         return guess_row, guess_column
 
 
+def computer_check():
+    """
+    Function to validate player guesses
+    """
+    row, column = computer_guess()
+    if player_board[row][column] == "#":
+        computer_guess()
+    elif player_board[row][column] == "X":
+        print("Computer hit!")
+        # computer_board[row][column] = "X"
+    else:
+        print("Computer missed!")
+        player_board[row][column] = "#"
+
+
 def increment_score(board):
     """
     Function to increment the score by 1 each time a ship is hit
     """
-    score = 0
+    player_score = 0
+    computer_score = 0
     for row in board:
         for column in row:
             if column == "X":
-                score += 1
-    print(f"You've hit {score} out of 5 battleships")
-    return score
+                player_score += 1
+                computer_score += 1
+    print(f"You've hit {player_score} out of 5 battleships")
+    print(f"Computer has hit {computer_score} battleships")
+    return player_score, computer_score
 
 
 def start_game():
