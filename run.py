@@ -43,7 +43,7 @@ def ship_placement(board):
         board[ship_row][ship_column] = "X"
 
 
-def player_guess():
+def guess_row():
     """
     Player guesses
     """
@@ -52,23 +52,32 @@ def player_guess():
         while row < 0 or row > 5:
             print("Oops, please choose a row between 0 and 5!")
             row = int(input("Please enter a row number:\n"))
+    except ValueError:
+        print("Please enter a valid number!")
+        guess_row()
+    col = guess_col()
+    print(f"You chose the co-ordinates ({row}, {column})")
+    return row, col
+
+
+def guess_col():
+    global column
+    try:
         column = int(input("Please enter a column number:\n"))
         while column < 0 or column > 5:
             print("Oops, please choose a column between 0 and 5!")
             column = int(input("Please enter a column number:\n"))
     except ValueError:
         print("Please enter a valid number!")
-        row = int(input("Please enter a row number:\n"))
-        column = int(input("Please enter a column number: "))
-    print(f"You chose the co-ordinates ({row}, {column})")
-    return int(row), int(column)
+        guess_col()
+    return column
 
 
 def guess_check():
     """
     Function to validate player guesses
     """
-    row, column = player_guess()
+    row, column = guess_row()
     if computer_board[row][column] == "#":
         print("Oops, you've already guessed those co-ordinates!")
     elif hidden_computer_board[row][column] == "X":
@@ -103,20 +112,20 @@ def computer_check():
         player_board[row][column] = "#"
 
 
-def increment_score(board):
-    """
-    Function to increment the score by 1 each time a ship is hit
-    """
-    player_score = 0
-    computer_score = 0
-    for row in board:
-        for column in row:
-            if column == "X":
-                player_score += 1
-                computer_score += 1
-    print(f"You've hit {player_score} out of 5 battleships")
-    print(f"Computer has hit {computer_score} battleships")
-    return player_score, computer_score
+# def increment_score(board):
+#     """
+#     Function to increment the score by 1 each time a ship is hit
+#     """
+#     player_score = 0
+#     computer_score = 0
+#     for row in board:
+#         for column in row:
+#             if column == "X":
+#                 player_score += 1
+#                 computer_score += 1
+#     print(f"You've hit {player_score} out of 5 battleships")
+#     print(f"Computer has hit {computer_score} battleships")
+#     return player_score, computer_score
 
 
 def start_game():
@@ -153,11 +162,11 @@ def main():
         print("\n")
         guess_check()
         computer_check()
-        if increment_score(computer_board) == 5:
-            print("Congratulations! You sunk all the Battleships!")
-        elif increment_score(player_board) == 5:
-            print("Computer wins!")
-            break
+        # if increment_score(computer_board) == 5:
+        #     print("Congratulations! You sunk all the Battleships!")
+        # elif increment_score(player_board) == 5:
+        #     print("Computer wins!")
+        #     break
 
 
 if __name__ == "__main__":
