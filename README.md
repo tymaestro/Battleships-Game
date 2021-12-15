@@ -126,15 +126,85 @@ This project has been tested on the Google Chrome browser, Safari browser, and t
 The site was deployed to the Heroku app through the following steps:
 <br>
 <br>
-
+Ensure that any unnecessary imports (such as import pprint) are deleted before deployment
 <br>
 <br>
-
+Ensure that any input methods used have a new line (\n) at the end of the text due to quirk in the software used to create the mock terminal
 <br>
 <br>
-
+Ensure that any dependencies are added to the requirements.txt file using pip3 freeze > requirements.txt in the terminal. This will update the requirements.txt file
 <br>
 <br>
+Create a free Heroku account. Heroku will ask for basic details such as name, email, and role (student)
+<br>
+<br>
+Confirm your account by clicking on the confirmation link sent via email
+<br>
+<br>
+Create your password and proceed
+<br>
+<br>
+Accept terms of service
+<br>
+<br>
+Create a new app for your project
+<br>
+<br>
+Choose a unique name for your app (non-unique names are not allowed on Heroku)
+<br>
+<br>
+Choose your location (USA or Europe) then create the app
+<br>
+<br>
+Once the app has been created, click the settings tab in the upper right of the screen
+<br>
+<br>
+Add a Config Var based on instructions from Code Institute
+<br>
+<br>
+The value for key within Config Var is ‘PORT’ and the value for value is 8000
+<br>
+<br>
+If you have used a file on your project that deals with sensitive information, make sure to add this as a Config Var as well. For example, a CREDS.json file would use CREDS as the value for key and the contents of the CREDS.json file as the value
+<br>
+<br>
+Add these Config Vars to your app
+<br>
+<br>
+Next step is to add two Buildpacks to your app
+<br>
+<br>
+These Buildpacks are Python and nodejs. It is very important to ensure that they are in the order of the Python buildpack first, followed by the nodejs buildpack
+<br>
+<br>
+Scroll to the top of the page and click the deploy section
+<br>
+<br>
+Choose Github as the deployment method
+<br>
+<br>
+Scroll down and confirm that we want to connect to Github
+<br>
+<br>
+Search for repository name within Github. My project is named “battleships-game22”
+<br>
+<br>
+Click the connect button to the right of the screen
+<br>
+<br>
+Scroll down, ensure that you have selected the main (master) branch, and click on deploy branch under the Manual Deploy heading
+<br>
+<br>
+This will allow you to see the deployment logs as it runs
+<br>
+<br>
+Once this process has finished, there will be a message that confirms that the app has been successfully deployed
+<br>
+<br>
+At the bottom of the screen, there will be a button to view the deployed project in the mock terminal
+<br>
+<br>
+Click the button to view the project
 
 <br>
 <br>

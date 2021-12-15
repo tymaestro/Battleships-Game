@@ -99,7 +99,7 @@ def start_game():
     """
     ship_placement(player_board)
     ship_placement(hidden_computer_board)
-    print(''' 
+    print('''
 __________         __    __  .__                .__    .__              
 \______   \_____ _/  |__/  |_|  |   ____   _____|  |__ |__|_____  ______
  |    |  _/\__  \\   __\   __\  | _/ __ \ /  ___/  |  \|  \____ \/  ___/
