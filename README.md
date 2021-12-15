@@ -1,7 +1,10 @@
-# Main Title
+# Battleships Game
 <br>
 
 <br>
+<br>
+
+## How to play
 <br>
 
 
@@ -71,9 +74,18 @@
 Python
 <br>
 
+### Bugs
+
+#### Solved Bugs
+<br>
+
+### Remaining Bugs
+<br>
+
+
 ### Validator Testing
 
-HTML: No errors were returned when passing through the official W3C validator.
+PYTHON: No errors were returned when passing through the official Pep8online validator.
 <br>
 
 
@@ -129,6 +141,9 @@ The site was deployed to the Heroku app through the following steps:
 The live link can be found here - 
 
 ## Credits
+<br>
+Code institute for the deployment terminal and general README structure
+
 
 
 
