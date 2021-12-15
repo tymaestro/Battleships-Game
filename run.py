@@ -48,17 +48,17 @@ def player_guess():
     Player guesses
     """
     try:
-        row = int(input("Please enter a row number: "))
+        row = int(input("Please enter a row number:\n"))
         while row < 0 or row > 5:
             print("Oops, please choose a row between 0 and 5!")
-            row = int(input("Please enter a row number: "))
-        column = int(input("Please enter a column number: "))
+            row = int(input("Please enter a row number:\n"))
+        column = int(input("Please enter a column number:\n"))
         while column < 0 or column > 5:
             print("Oops, please choose a column between 0 and 5!")
-            column = int(input("Please enter a column number: "))
+            column = int(input("Please enter a column number:\n"))
     except ValueError:
         print("Please enter a valid number!")
-        row = int(input("Please enter a row number: "))
+        row = int(input("Please enter a row number:\n"))
     print(f"You chose the co-ordinates ({row}, {column})")
     return int(row), int(column)
 
@@ -98,7 +98,7 @@ def start_game():
     """
     ship_placement(player_board)
     ship_placement(hidden_computer_board)
-    name = input("\nAhoy Matey!\n\nPlease enter your name to continue: ")
+    name = input("\nAhoy Matey!\n\nPlease enter your name to continue:\n")
     welcome(name)
 
 
@@ -106,14 +106,6 @@ def main():
     """
     This is the main function for starting the game
     """
-#     print('''
-# __________         __    __  .__                .__    .__              
-# \______   \_____ _/  |__/  |_|  |   ____   _____|  |__ |__|_____  ______
-#  |    |  _/\__  \\   __\   __\  | _/ __ \ /  ___/  |  \|  \____ \/  ___/
-#  |    |   \ / __ \|  |  |  | |  |_\  ___/ \___ \|   Y  \  |  |_> >___ \ 
-#  |______  /(____  /__|  |__| |____/\___  >____  >___|  /__|   __/____  >
-#         \/      \/                     \/     \/     \/   |__|       \/ 
-# ''')
     start_game()
     score = 5
     while score < 6:
