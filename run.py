@@ -13,6 +13,7 @@ def create_board():
 
 player_board = create_board()
 computer_board = create_board()
+hidden_computer_board = create_board()
 
 
 def print_board(board):
@@ -94,6 +95,7 @@ def start_game():
     asks for name input, and calls welcome function
     """
     ship_placement(player_board)
+    ship_placement(hidden_computer_board)
     name = input("Ahoy Matey!\nPlease enter your name to continue: ")
     welcome(name)
 
