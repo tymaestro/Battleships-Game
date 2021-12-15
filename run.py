@@ -68,7 +68,7 @@ def guess_check():
     row, column = player_guess()
     if computer_board[row][column] == "#":
         print("Oops, you've already guessed those co-ordinates!")
-    elif player_board[row][column] == "X":
+    elif hidden_computer_board[row][column] == "X":
         print("Congratulations, it's a direct hit!")
         computer_board[row][column] = "X"
     else:
@@ -108,8 +108,8 @@ def main():
     score = 5
     while score < 6:
         print("Please choose co-ordinates between 0 and 5")
-        # print("\n\nPlayer Board\n")
-        # print_board(player_board)
+        print("\n\nPlayer Board\n")
+        print_board(player_board)
         print("\n\nComputer Board\n")
         print_board(computer_board)
         print("\n")
