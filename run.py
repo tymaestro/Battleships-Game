@@ -59,6 +59,7 @@ def player_guess():
     except ValueError:
         print("Please enter a valid number!")
         row = int(input("Please enter a row number:\n"))
+        column = int(input("Please enter a column number: "))
     print(f"You chose the co-ordinates ({row}, {column})")
     return int(row), int(column)
 
