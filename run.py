@@ -99,7 +99,15 @@ def start_game():
     """
     ship_placement(player_board)
     ship_placement(hidden_computer_board)
-    name = input("\nAhoy Matey!\n\nPlease enter your name to continue:\n")
+    print('''
+    __________         __    __  .__                .__    .__              
+    \______   \_____ _/  |__/  |_|  |   ____   _____|  |__ |__|_____  ______
+    |    |  _/\__  \\   __\   __\  | _/ __ \ /  ___/  |  \|  \____ \/  ___/
+    |    |   \ / __ \|  |  |  | |  |_\  ___/ \___ \|   Y  \  |  |_> >___ \ 
+    |______  /(____  /__|  |__| |____/\___  >____  >___|  /__|   __/____  >
+            \/      \/                     \/     \/     \/   |__|       \/ 
+    ''')
+    name = input("\n\nAhoy Matey!\n\nPlease enter your name to continue:\n")
     welcome(name)
 
 
