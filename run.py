@@ -29,7 +29,9 @@ def welcome(player):
     """
     welcome message for players
     """
+    print("-" * 35)
     print(f"Welcome to Battleships {player}!")
+    print("-" * 35)
 
 
 def ship_placement(board):
@@ -96,7 +98,7 @@ def start_game():
     """
     ship_placement(player_board)
     ship_placement(hidden_computer_board)
-    name = input("Ahoy Matey!\nPlease enter your name to continue: ")
+    name = input("\nAhoy Matey!\n\nPlease enter your name to continue: ")
     welcome(name)
 
 
@@ -104,6 +106,14 @@ def main():
     """
     This is the main function for starting the game
     """
+#     print('''
+# __________         __    __  .__                .__    .__              
+# \______   \_____ _/  |__/  |_|  |   ____   _____|  |__ |__|_____  ______
+#  |    |  _/\__  \\   __\   __\  | _/ __ \ /  ___/  |  \|  \____ \/  ___/
+#  |    |   \ / __ \|  |  |  | |  |_\  ___/ \___ \|   Y  \  |  |_> >___ \ 
+#  |______  /(____  /__|  |__| |____/\___  >____  >___|  /__|   __/____  >
+#         \/      \/                     \/     \/     \/   |__|       \/ 
+# ''')
     start_game()
     score = 5
     while score < 6:
