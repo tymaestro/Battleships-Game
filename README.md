@@ -114,11 +114,28 @@ PYTHON: No errors were returned when passing through the official Pep8online lin
 
 ### Feature Function
 
+This is the random module that has been imported for use in generating random numbers for board creation and computer guess
+
 <img src="./docs/random-module.png">
+
+Testing 
+
 <img src="./docs/create-board-function.png">
+
+Testing 
+
 <img src="./docs/print-board-function.png">
+
+Testing 
+
 <img src="./docs/welcome-function.png">
+
+Testing 
+
 <img src="./docs/ship-placement-function.png">
+
+Testing 
+
 <img src="./docs/start-game-function.png">
 
 <br>
@@ -227,7 +244,7 @@ The live link can be found here -
 
 Code institute for the deployment terminal and general README structure
 
-[Wikipedia](https://en.wikipedia.org/wiki/Battleship_(game))
+[Wikipedia](https://en.wikipedia.org/wiki/Battleship_(game)) for a general overview of Battleships and how to play
 
 Partial testing was done using [PythonTutor](https://pythontutor.com/visualize.html#mode=edit)
 
