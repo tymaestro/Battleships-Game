@@ -114,17 +114,18 @@ def computer_guess():
     Function to generate random numbers for computer guess
     """
     guess_row, guess_col = randint(0, 5), randint(0, 5)
+    print(guess_row, guess_col)
     return guess_row, guess_col
 
 
 def computer_check():
     """
-    Function to validate player guesses
+    Function to validate computer guess using recursion
     """
     row, col = computer_guess()
 
     if player_board[row][col] == "#" or player_board[row][col] == "X":
-        computer_guess()
+        return computer_check()
 
     elif player_board[row][col] == "O":
         print("Computer hit!")
@@ -135,19 +136,6 @@ def computer_check():
         print("Computer missed!\n")
         player_board[row][col] = "#"
         return False
-
-
-# def increment_score(val):
-#     """
-#     Function to increment the score by 1 each time a ship is hit
-#     """
-#     if val == "p":
-#         p_score += 1
-
-#     else:
-#         c_score += 1
-#     print(f"You've hit {p_score} out of 5 battleships")
-#     print(f"Computer has hit {c_score} battleships")
 
 
 def start_game():
@@ -194,13 +182,13 @@ def main():
 
         if computer_check():
             c_score += 1
-
-        # if increment_score(computer_board) == 5:
-        #     print("Congratulations! You sunk all the Battleships!")
-        #     break
-        # elif increment_score(player_board) == 5:
-        #     print("Computer wins!")
-        #     break
+    if p_score == 5 and c_score == 5:
+        print("It's a draw, how unlikely!")
+    elif p_score == 5:
+        print(f"Congratulations {name}, you sunk all the battleships!")
+    else:
+        print("Oh no! The computer has won!")
+    print("THE END")
 
 
 if __name__ == "__main__":
