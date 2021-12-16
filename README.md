@@ -28,6 +28,7 @@ This will repeat until there is a winner!
 ## Features
 <br>
 
+
 <img src="./docs/terminal-opening.png">
 <br>
 <br>
