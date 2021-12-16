@@ -33,6 +33,7 @@ This will repeat until there is a winner!
 <br>
 This game features a computer board and a player board when printed and the player board is unique to the name input provided as opposed to being a generic board name. It makes for a more engaging game experience
 <br>
+<br>
 <img src="./docs/terminal-opening.png">
 <br>
 <br>
