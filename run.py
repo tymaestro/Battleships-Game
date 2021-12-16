@@ -47,6 +47,7 @@ def guess_row():
     """
     Player guesses
     """
+    global row
     try:
         row = int(input("Please enter a row number:\n"))
         while row < 0 or row > 5:
@@ -144,6 +145,8 @@ __________         __    __  .__                .__    .__
         \/      \/                     \/     \/     \/   |__|       \/ 
     ''')
     name = input("\n\nAhoy Matey!\n\nPlease enter your name to continue:\n")
+    while len(name) == 0:
+        name = input("\n\nOops, you can't leave this section blank:\n")
     welcome(name)
 
 
