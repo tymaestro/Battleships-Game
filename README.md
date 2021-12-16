@@ -8,7 +8,6 @@ Battleships is accessible to, and can be enjoyable, for all age groups but requi
 <br>
 <img src="./docs/battleships-image.png">
 <br>
-<br>
 
 This is a welcoming opening for players of Battleships. It personalises the welcome message depending on the name input provided. There is also error handling in case this field is left blank.
 
@@ -80,7 +79,6 @@ Using the Run Program button in the Code Institute mock terminal, we can restart
 <br>
 <br>
 <img src="./docs/end-game.png">
-<br>
 <br>
 
 ### Features Left To Implement
@@ -172,7 +170,7 @@ This function is identical to the guess_row function except "col" is the variabl
 
 Testing guess_check():
 
-
+This function defines row and col and calls guess_row() and guess_col() respectively and prints the result. The if/else statement verifies if you have hit a ship, missed a ship, or if you have already guessed those co-ordinates and marks the computer board depending on your guess. If guess_check returns True, the p_score in the main() function is incremented by 1. I tried several different ways of incrementing the score and initially tried to create a separate function. As with some of the previous functions, I was overcomplicating it and when I took a step back I was able to see an alternative. A bug in my previous attempt was that I couldn't get the score to increment at all and then at another point the score was jumping directly to 5 due to an ill-placed for loop. Breaking this problem down into smaller parts as well as solving some of the other functions helped me to fix this problem.
 
 <img src="./docs/guess-check-function.png">
 
@@ -183,6 +181,8 @@ This function generates a random number to be used as the computer guess. No bug
 <img src="./docs/computer-guess-function.png">
 
 Testing computer_check():
+
+
 
 <img src="./docs/computer-check-function.png">
 

@@ -93,7 +93,7 @@ def guess_col():
 
 def guess_check():
     """
-    Function to validate player guesses
+    Function to validate player guess
     """
     row, col = guess_row(), guess_col()
     print(f"You chose the co-ordinates ({row}, {col})\n")
@@ -125,7 +125,7 @@ def computer_guess():
 
 def computer_check():
     """
-    Function to validate computer guess using recursion
+    Function to validate computer guess
     """
     row, col = computer_guess()
 
