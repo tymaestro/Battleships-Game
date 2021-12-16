@@ -294,7 +294,8 @@ The site was deployed to the Heroku app through the following steps:
 
 <br>
 <br>
-The live link can be found here - 
+
+The live link can be found here: [Battleships](https://battleships-game22.herokuapp.com/)
 
 ## Credits
 <br>
