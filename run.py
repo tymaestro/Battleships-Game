@@ -60,7 +60,7 @@ def guess_row():
             row = int(input("Please enter a row number:\n"))
 
     except ValueError:
-        print("Please enter a valid number!")
+        print("Please enter a valid number!\n")
         guess_row()
 
     return row
@@ -79,7 +79,7 @@ def guess_col():
             col = int(input("Please enter a column number:\n"))
 
     except ValueError:
-        print("Please enter a valid number!")
+        print("Please enter a valid number!\n")
         guess_col()
 
     return col
@@ -181,7 +181,7 @@ def main():
 
         if computer_check():
             c_score += 1
-            
+
     if p_score == 5 and c_score == 5:
         print(f"\n\n{name}'s Board\n")
         print_board(player_board)
