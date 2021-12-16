@@ -74,6 +74,9 @@ Battleships is a strategy guessing game
 
 Python
 <br>
+Github was used for version control to store commit history
+<br>
+Heroku was used to deploy our final project
 
 ### Bugs
 
