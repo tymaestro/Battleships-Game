@@ -10,7 +10,7 @@ Battleships is accessible to, and can be enjoyable, for all age groups but requi
 <br>
 <br>
 
-This is a welcoming opening for players of Battleships. It personalises the messages and board name depending on the name input provided. There is also error handling in case this field is left blank.
+This is a welcoming opening for players of Battleships. It personalises the welcome message depending on the name input provided. There is also error handling in case this field is left blank.
 
 ## How to play
 <br>
@@ -67,72 +67,30 @@ This time you got lucky! This is an example of a player hit!
 <img src="./docs/player-hit.png">
 <br>
 <br>
-Here we can see that that the player score and computer score is incremented and the board updated to reflect the score
+Here we can see that the player score and computer score is incremented and the board updated to reflect the score
 <br>
 <br>
 <img src="./docs/score-incrementation.png">
 <br>
 <br>
-
+Once either the player or the computer has hit all 5 ships, the program is complete and the appropriate winning message is displayed
 <br>
 <br>
 <img src="./docs/end-game.png">
-
 <br>
 <br>
-
-### Main heading
-
-
-
-
-<br>
-<br>
-
-
-<br>
-<br>
-
-
-
-
-<br>
-<br>
-
-### Main Game Section
-
-
-
-
-<br>
-<br>
-
-
-<br>
-<br>
-
-
-<br>
-<br>
-
-
-<br>
-<br>
-
-
-<br>
-<br>
-
 
 ### Features Left To Implement
 
 Implement a feature to give the player the option of choosing the position of their ships instead of having them positioned at random
 
+Allow players to chooose the length of their ships to add more strategy to the game than ships of length 1
+
 Add the option of choosing a player vs player setup where you can play against your friends instead of playing the computer
 
 ## Technologies
 
-Python
+PYTHON
 
 [Github](https://github.com/) was used for version control to store commit history
 
@@ -155,7 +113,7 @@ PYTHON: No errors were returned when passing through the official Pep8online lin
 
 ### Remaining Bugs
 <br>
-
+<br>
 
 <hr>
 <br>
