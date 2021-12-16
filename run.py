@@ -42,9 +42,28 @@ def ship_placement(board):
     while ships < 5:
         ship_row, ship_column = randint(0, 5), randint(0, 5)
 
-        if board[ship_row][ship_column] != "X":
-            board[ship_row][ship_column] = "X"
+        if board[ship_row][ship_column] != "O":
+            board[ship_row][ship_column] = "O"
             ships = ships+1
+
+
+def guess_row():
+    """
+    Player row guess
+    """
+    global row
+
+    try:
+        row = int(input("Please enter a row number:\n"))
+        while row < 0 or row > 5:
+            print("Oops, please choose a row between 0 and 5!")
+            row = int(input("Please enter a row number:\n"))
+
+    except ValueError:
+        print("Please enter a valid number!")
+        guess_row()
+
+    return row
 
 
 def guess_col():
@@ -66,38 +85,17 @@ def guess_col():
     return column
 
 
-def guess_row():
-    """
-    Player row guess
-    """
-    global row
-
-    try:
-        row = int(input("Please enter a row number:\n"))
-        while row < 0 or row > 5:
-            print("Oops, please choose a row between 0 and 5!")
-            row = int(input("Please enter a row number:\n"))
-
-    except ValueError:
-        print("Please enter a valid number!")
-        guess_row()
-
-    col = guess_col()
-
-    print(f"You chose the co-ordinates ({row}, {column})")
-    return row, col
-
-
 def guess_check():
     """
     Function to validate player guesses
     """
-    row, column = guess_row()
+    row, column = guess_row(), guess_col()
+    print(f"You chose the co-ordinates ({row}, {column})")
 
     if computer_board[row][column] == "#":
         print("Oops, you've already guessed those co-ordinates!")
 
-    elif hidden_computer_board[row][column] == "X":
+    elif hidden_computer_board[row][column] == "O":
         print("Congratulations, it's a direct hit!")
         computer_board[row][column] = "X"
 
@@ -123,9 +121,9 @@ def computer_check():
     if player_board[row][column] == "#":
         computer_guess()
 
-    elif player_board[row][column] == "X":
+    elif player_board[row][column] == "O":
         print("Computer hit!")
-        # computer_board[row][column] = "X"
+        player_board[row][column] = "X"
 
     else:
         print("Computer missed!")
