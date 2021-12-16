@@ -38,27 +38,13 @@ def ship_placement(board):
     """
     Generate random ship locations
     """
-    for ship in range(5):
+    ships = 0
+    while ships < 5:
         ship_row, ship_column = randint(0, 5), randint(0, 5)
-        board[ship_row][ship_column] = "X"
 
-
-def guess_row():
-    """
-    Player row guess
-    """
-    global row
-    try:
-        row = int(input("Please enter a row number:\n"))
-        while row < 0 or row > 5:
-            print("Oops, please choose a row between 0 and 5!")
-            row = int(input("Please enter a row number:\n"))
-    except ValueError:
-        print("Please enter a valid number!")
-        guess_row()
-    col = guess_col()
-    print(f"You chose the co-ordinates ({row}, {column})")
-    return row, col
+        if board[ship_row][ship_column] != "X":
+            board[ship_row][ship_column] = "X"
+            ships = ships+1
 
 
 def guess_col():
@@ -66,15 +52,40 @@ def guess_col():
     Player column guess
     """
     global column
+
     try:
         column = int(input("Please enter a column number:\n"))
         while column < 0 or column > 5:
             print("Oops, please choose a column between 0 and 5!")
             column = int(input("Please enter a column number:\n"))
+
     except ValueError:
         print("Please enter a valid number!")
         guess_col()
+
     return column
+
+
+def guess_row():
+    """
+    Player row guess
+    """
+    global row
+
+    try:
+        row = int(input("Please enter a row number:\n"))
+        while row < 0 or row > 5:
+            print("Oops, please choose a row between 0 and 5!")
+            row = int(input("Please enter a row number:\n"))
+
+    except ValueError:
+        print("Please enter a valid number!")
+        guess_row()
+
+    col = guess_col()
+
+    print(f"You chose the co-ordinates ({row}, {column})")
+    return row, col
 
 
 def guess_check():
@@ -82,11 +93,14 @@ def guess_check():
     Function to validate player guesses
     """
     row, column = guess_row()
+
     if computer_board[row][column] == "#":
         print("Oops, you've already guessed those co-ordinates!")
+
     elif hidden_computer_board[row][column] == "X":
         print("Congratulations, it's a direct hit!")
         computer_board[row][column] = "X"
+
     else:
         print("Sorry, you missed this time.\nPlease try again.")
         computer_board[row][column] = "#"
@@ -96,9 +110,8 @@ def computer_guess():
     """
     Function to generate random numbers for computer guess
     """
-    for guess in range(1):
-        guess_row, guess_column = randint(0, 5), randint(0, 5)
-        return guess_row, guess_column
+    guess_row, guess_column = randint(0, 5), randint(0, 5)
+    return guess_row, guess_column
 
 
 def computer_check():
@@ -106,11 +119,14 @@ def computer_check():
     Function to validate player guesses
     """
     row, column = computer_guess()
+
     if player_board[row][column] == "#":
         computer_guess()
+
     elif player_board[row][column] == "X":
         print("Computer hit!")
         # computer_board[row][column] = "X"
+
     else:
         print("Computer missed!")
         player_board[row][column] = "#"
@@ -141,8 +157,8 @@ def start_game():
     ship_placement(hidden_computer_board)
     print('''
 __________.........__    __  .__                .__    .__ .............
-\______   \_____ _/  |__/  |_|  |   ____   _____|  |__ |__|_____  ______
- |    |  _/\__  \\   __\   __\  | _/ __ \ /  ___/  |  \|  \____ \/  ___/
+\______   \_____ _/  |__/  |_|  |  ____   _____|  |__ |__|_____  ______
+ |    |  _/\__  \\   __\   __\   |_/ __ \ /  ___/  |  \|  \____ \/  ___/
  |    |   \ / __ \|  |  |  | |  |_\  ___/ \___ \|   Y  \  |  |_> >___ \.
  |______  /(____  /__|  |__| |____/\___  >____  >___|  /__|   __/____  >
         \/      \/                     \/     \/     \/   |__|.......\/.
@@ -166,10 +182,13 @@ def main():
         print("\n\nComputer Board\n")
         print_board(computer_board)
         print("\n")
+
         guess_check()
         computer_check()
+
         # if increment_score(computer_board) == 5:
         #     print("Congratulations! You sunk all the Battleships!")
+        #     break
         # elif increment_score(player_board) == 5:
         #     print("Computer wins!")
         #     break
