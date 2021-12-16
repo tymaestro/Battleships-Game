@@ -189,11 +189,13 @@ Testing computer_check():
 
 Testing start_game():
 
-This function calls the ship_placement() function to generate the ship locations for the player board and the hidden computer board. This function also prints the initial Battleships message and asks you to input your name. The name input cannot be left blank and this is achieved through the use of a while loop and length of name that must be greater than 0. When the while loop is complete, the welcome() function is called.
+This function calls the ship_placement() function to generate the ship locations for the player board and the hidden computer board. This function also prints the initial Battleships message and asks you to input your name. The name input cannot be left blank and this is achieved through the use of a while loop and length of name that must be greater than 0. When the while loop is complete, the welcome() function is called. No bugs were found during testing.
 
 <img src="./docs/start-game-function.png">
 
 Testing main():
+
+This is the main game function to start the game. The start_game() function is called. Then we define the scores for the player and computer. There is a while loop to take care of scoring and incrementation for the game. By calling the guess_check and computer_check functions and checking if they return True, we can verify if there has been a hit. Once either the player or the computer hits all five ships, the game is complete. This function also prints the boards, scores, and guidlines for the game.
 
 <img src="./docs/main-game-1.png">
 <img src="./docs/main-game-2.png">
