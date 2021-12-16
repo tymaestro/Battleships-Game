@@ -79,11 +79,7 @@ This will repeat until there is a winner!
 ### Features Left To Implement
 
 
-
-## Testing
-<br>
-
-### Technologies
+## Technologies
 
 Python
 
@@ -91,18 +87,21 @@ Python
 
 [Heroku](https://www.heroku.com/home) was used to deploy our final project
 
+
+## Testing
+<br>
+### Validator Testing
+
+PYTHON: No errors were returned when passing through the official Pep8online linter
+
+<img src="./docs/pep8-screenshot.png">
+
 ### Bugs
 
 #### Solved Bugs
 <br>
 
 ### Remaining Bugs
-<br>
-
-
-### Validator Testing
-
-PYTHON: No errors were returned when passing through the official Pep8online linter.
 <br>
 
 
@@ -114,6 +113,12 @@ PYTHON: No errors were returned when passing through the official Pep8online lin
 
 ### Feature Function
 
+<img src="./docs/random-module.png">
+<img src="./docs/create-board-function.png">
+<img src="./docs/print-board-function.png">
+<img src="./docs/welcome-function.png">
+<img src="./docs/ship-placement-function.png">
+<img src="./docs/start-game-function.png">
 
 <br>
 <br>
