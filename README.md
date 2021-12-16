@@ -158,13 +158,19 @@ This function places the ships on the boards by generating a random number. I ha
 
 Testing guess_row():
 
+This function prompts the user to input a row number. The input() is wrapped in an int() to ensure that only integers can be accepted. As printed in the main function, a valid row number is between 0 and 5. There is a while loop to ensure that only integers in the range 0 to 5 will be accepted. Until the while loop condition is complete, the user will be asked again to enter a row number. In the case of a non-numeric value being entered, there is an except statement. You will be prompted to enter a valid number and then the guess_row() function will be called again. I initially had the guess_row() function and the guess_col() function as one function but found myself with too many while loops and concluded that the best path forward was to separate them. A bug I encountered before separating the functions was that if a non-numeric value was entered for the row input, it would call the except statement but then exit the loop I had created without asking for column input. I resolved this by creating separate functions and simplifying my code.
+
 <img src="./docs/guess-row-function.png">
 
 Testing guess_col():
 
+This function is identical to the guess_row function except it asks the user for a column input instead of a row input. Bugs and fixes were the same as in the above function.
+
 <img src="./docs/guess-col-function.png">
 
 Testing guess_check():
+
+
 
 <img src="./docs/guess-check-function.png">
 
