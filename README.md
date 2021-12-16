@@ -43,7 +43,7 @@ Once the row and column have been validated, the results of that round of playin
 <img src="./docs/coord-miss.png">
 <br>
 <br>
-Here is an example of a player guess when the co-ordinates inputted have been previously selected. You will miss you turn if you make this mistake!
+Here is an example of a player guess when the co-ordinates inputted have been previously selected. You will miss your turn if you make this mistake!
 <br>
 <br>
 <img src="./docs/coord-same.png">
@@ -102,7 +102,12 @@ PYTHON
 
 ### Validator Testing
 
-PYTHON: No errors were returned when passing through the official Pep8online linter
+<br>
+<br>
+
+PYTHON: No errors were returned when passing through the official [Pep8](http://pep8online.com/) linter
+<br>
+<br>
 
 <img src="./docs/pep8-screenshot.png">
 
@@ -125,51 +130,59 @@ PYTHON: No errors were returned when passing through the official Pep8online lin
 
 Testing has been done using both [PythonTutor](https://pythontutor.com/visualize.html#mode=edit) and print() to verify and debug my code
 
+<br>
+<br>
+Here I have displayed each function in my code. These are the nuts and bolts of the game and a view of what these functions look like during game play can be found in the features section of this README file. This can assist in a more visual explanation of these functions.
+<br>
+<br>
+
 This is the random module that has been imported for use in generating random numbers for board creation and computer guess
 
 <img src="./docs/random-module.png">
 
-Testing create_board()
+Testing create_board():
+
+Through the use of list comprehension, I have iterated through range(6) for x and y to create a 2D list as my board. This board will then be used to create a visible player board which will store the ship locations of the player, a visible computer board with no ship locations marked, and a hidden computer board to store the ship locations for the computer. This function was tested thoroughly using PythonTutor to work through each step of the board creation. No bugs were found during testing
 
 <img src="./docs/create-board-function.png">
 
-Testing print_board()
+Testing print_board():
 
 <img src="./docs/print-board-function.png">
 
-Testing welcome()
+Testing welcome():
 
 <img src="./docs/welcome-function.png">
 
-Testing ship_placement()
+Testing ship_placement():
 
 <img src="./docs/ship-placement-function.png">
 
-Testing guess_row()
+Testing guess_row():
 
 <img src="./docs/guess-row-function.png">
 
-Testing guess_col()
+Testing guess_col():
 
 <img src="./docs/guess-col-function.png">
 
-Testing guess_check()
+Testing guess_check():
 
 <img src="./docs/guess-check-function.png">
 
-Testing computer_guess()
+Testing computer_guess():
 
 <img src="./docs/computer-guess-function.png">
 
-Testing computer_check()
+Testing computer_check():
 
 <img src="./docs/computer-check-function.png">
 
-Testing start_game()
+Testing start_game():
 
 <img src="./docs/start-game-function.png">
 
-Testing main()
+Testing main():
 
 <img src="./docs/main-game-1.png">
 <img src="./docs/main-game-2.png">
@@ -288,6 +301,6 @@ Part of my testing was done using [PythonTutor](https://pythontutor.com/visualiz
 
 ## Acknowledgements
 
-A very big thank you to my mentor who gave me very helpful feedback and was very encouraging during our mentor sessions.
+A very big thank you to my mentor Daisy McGirr who gave me very helpful feedback and was very encouraging during our mentor sessions.
 
 Also, a big thank you to the Slack community over the course of this entire module.
