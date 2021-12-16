@@ -1,8 +1,9 @@
 # Battleships Game
 <br>
-
+ADD SCREENSHOT
 <br>
 <br>
+Battleships is a strategy guessing game
 
 ## How to play
 <br>
@@ -213,6 +214,8 @@ The live link can be found here -
 ## Credits
 <br>
 Code institute for the deployment terminal and general README structure
+<br>
+[Wikipedia](https://en.wikipedia.org/wiki/Battleship_(game)) for instructions on the Battleship game
 
 
 
