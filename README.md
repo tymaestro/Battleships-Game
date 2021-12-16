@@ -1,11 +1,14 @@
 # Battleships Game
 <br>
+Battleships is a strategy guessing game that can be played against the computer or between two players. This version will be played against the computer
+<br>
+<br>
+Battleships is accessible to, and can be enjoyable, for all age groups but requires a good strategy to be played well. Anyone who loves a challenege will enjoy this game
+<br>
+<br>
 <img src="./docs/battleships-image.png">
 <br>
 <br>
-Battleships is a strategy guessing game that can be played against the computer or between two players. This version will be played against the computer
-
-Battleships is accessible to, and can be enjoyable, for all age groups but requires a good strategy to be played well. Anyone who loves a challenege will enjoy this game
 
 ## How to play
 <br>
@@ -25,10 +28,25 @@ This will repeat until there is a winner!
 ## Features
 <br>
 
-
-
-
-
+<img src="./docs/battleships-image.png">
+<br>
+<br>
+<img src="./docs/battleships-image.png">
+<br>
+<br>
+<img src="./docs/battleships-image.png">
+<br>
+<br>
+<img src="./docs/battleships-image.png">
+<br>
+<br>
+<img src="./docs/battleships-image.png">
+<br>
+<br>
+<img src="./docs/battleships-image.png">
+<br>
+<br>
+<img src="./docs/battleships-image.png">
 
 <br>
 <br>
