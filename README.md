@@ -140,15 +140,19 @@ Through the use of list comprehension, I have iterated through range(6) for x an
 
 Testing print_board():
 
-This function 
+This function allows the boards to be printed. It joins a " | " to each row for visual clarity. No bugs were found during testing
 
 <img src="./docs/print-board-function.png">
 
 Testing welcome():
 
+This function is straightforward and prints the welcome message and game information to the user. No bugs were found during testing
+
 <img src="./docs/welcome-function.png">
 
 Testing ship_placement():
+
+This function places the ships on the boards by generating a random number. I have used an if statement within a while loop to ensure that a ship cannot be placed on the same co-ordinates and the while loop will be completed when the number of ships is 5. I initially approached creating the ships with a more complicated and unnecessary for loop within a for loop. I struggled to see a way of generating non-repeating random numbers until I changed my approach. No bugs were found but it took me a while to see how I could execute this function successfully. The solution I came up with is simpler and more effective than my initial idea
 
 <img src="./docs/ship-placement-function.png">
 
