@@ -114,7 +114,6 @@ def computer_guess():
     Function to generate random numbers for computer guess
     """
     guess_row, guess_col = randint(0, 5), randint(0, 5)
-    print(guess_row, guess_col)
     return guess_row, guess_col
 
 
@@ -128,12 +127,12 @@ def computer_check():
         return computer_check()
 
     elif player_board[row][col] == "O":
-        print("Computer hit!")
+        print("\nComputer hit!\n")
         player_board[row][col] = "X"
         return True
 
     else:
-        print("Computer missed!\n")
+        print("\nComputer missed!\n")
         player_board[row][col] = "#"
         return False
 
@@ -182,13 +181,37 @@ def main():
 
         if computer_check():
             c_score += 1
+            
     if p_score == 5 and c_score == 5:
-        print("It's a draw, how unlikely!")
+        print(f"\n\n{name}'s Board\n")
+        print_board(player_board)
+        print("\n\nComputer Board\n")
+        print_board(computer_board)
+        print("\n")
+        print(f"{name}'s score is {p_score}")
+        print(f"Computer's score is {c_score}")
+        print("\nIt's a draw, how unlikely!\n")
+        
     elif p_score == 5:
-        print(f"Congratulations {name}, you sunk all the battleships!")
+        print(f"\n\n{name}'s Board\n")
+        print_board(player_board)
+        print("\n\nComputer Board\n")
+        print_board(computer_board)
+        print("\n")
+        print(f"{name}'s score is {p_score}")
+        print(f"Computer's score is {c_score}")
+        print(f"\nCongratulations {name}, you sunk all the battleships!\n")
+
     else:
-        print("Oh no! The computer has won!")
-    print("THE END")
+        print(f"\n\n{name}'s Board\n")
+        print_board(player_board)
+        print("\n\nComputer Board\n")
+        print_board(computer_board)
+        print("\n")
+        print(f"{name}'s score is {p_score}")
+        print(f"Computer's score is {c_score}")
+        print("\nOh no! The computer has won!\n")
+    print("\nTHE END\n")
 
 
 if __name__ == "__main__":
