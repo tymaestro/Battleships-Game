@@ -78,6 +78,9 @@ This will repeat until there is a winner!
 
 ### Features Left To Implement
 
+Implement a feature to give the player the option of choosing the position of their ships instead of having them positioned at random
+
+Add the option of choosing a player vs player setup where you can play against your friends instead of playing the computer
 
 ## Technologies
 
@@ -118,23 +121,23 @@ This is the random module that has been imported for use in generating random nu
 
 <img src="./docs/random-module.png">
 
-Testing 
+Testing create_board()
 
 <img src="./docs/create-board-function.png">
 
-Testing 
+Testing print_board()
 
 <img src="./docs/print-board-function.png">
 
-Testing 
+Testing welcome()
 
 <img src="./docs/welcome-function.png">
 
-Testing 
+Testing ship_placement()
 
 <img src="./docs/ship-placement-function.png">
 
-Testing 
+Testing start_game()
 
 <img src="./docs/start-game-function.png">
 
