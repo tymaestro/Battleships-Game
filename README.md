@@ -10,6 +10,8 @@ Battleships is accessible to, and can be enjoyable, for all age groups but requi
 <br>
 <br>
 
+This is a welcoming opening for players of Battleships. It personalises the messages and board name depending on the name input provided. There is also error handling in case this field is left blank.
+
 ## How to play
 <br>
 This version of Battleships will be played on two 6x6 grids. One for the player and one for the computer
@@ -20,6 +22,8 @@ At the start of the game you will be asked to input your name
 
 Then, you will input your co-ordinates (row followed by column) and press enter to check if you have hit one of the computer's ships
 
+This is an unforgiving game so make sure not to choose the same co-ordinates twice or the computer will get a free guess and you'll miss your turn!
+
 Depending on the result, both your board and the computer's board will be updated with the position of your respective guesses
 
 This will repeat until there is a winner!
@@ -27,24 +31,48 @@ This will repeat until there is a winner!
 
 ## Features
 <br>
-
-
+This game features a computer board and a player board when printed and the player board is unique to the name input provided as opposed to being a generic board name. It makes for a more engaging game experience
+<br>
 <img src="./docs/terminal-opening.png">
+<br>
+<br>
+Once the row and column have been validated, the results of that round of playing are shown. Here is an example of a miss for both player and computer
 <br>
 <br>
 <img src="./docs/coord-miss.png">
 <br>
 <br>
+Here is an example of a player guess when the co-ordinates inputted have been previously selected. You will miss you turn if you make this mistake!
+<br>
+<br>
 <img src="./docs/coord-same.png">
+<br>
+<br>
+Through the use of try/except statements and while loops, there is comprehensive error handling for numbers outside the grid size as well as for non-numeric values
 <br>
 <br>
 <img src="./docs/validation-sample.png">
 <br>
 <br>
+This is an example of a computer hit and a player miss. You'll have to try again. Better luck next time!
+<br>
+<br>
 <img src="./docs/computer-hit.png">
 <br>
 <br>
+This time you got lucky! This is an example of a player hit!
+<br>
+<br>
+<img src="./docs/player-hit.png">
+<br>
+<br>
+Here we can see that that the player score and computer score is incremented and the board updated to reflect the score
+<br>
+<br>
 <img src="./docs/score-incrementation.png">
+<br>
+<br>
+
 <br>
 <br>
 <img src="./docs/end-game.png">
