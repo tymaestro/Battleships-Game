@@ -39,6 +39,7 @@ def ship_placement(board):
     Generate random ship locations
     """
     ships = 0
+
     while ships < 5:
         ship_row, ship_col = randint(0, 5), randint(0, 5)
 
@@ -55,6 +56,7 @@ def guess_row():
 
     try:
         row = int(input("Please enter a row number:\n"))
+
         while row < 0 or row > 5:
             print("Oops, please choose a row between 0 and 5!")
             row = int(input("Please enter a row number:\n"))
@@ -74,6 +76,7 @@ def guess_col():
 
     try:
         col = int(input("Please enter a column number:\n"))
+
         while col < 0 or col > 5:
             print("Oops, please choose a column between 0 and 5!")
             col = int(input("Please enter a column number:\n"))
@@ -139,7 +142,7 @@ def computer_check():
 
 def start_game():
     """
-    Start game function which calls the ship_placement function
+    Start game function which calls the ship_placement function,
     asks for name input, and calls welcome function
     """
     ship_placement(player_board)
@@ -152,8 +155,10 @@ __________.........__    __  .__               .__    .__ .............
  |______  /(____  /__|  |__| |____/\___  >____  >___|  /__|   __/____  >
         \/      \/                     \/     \/     \/   |__|.......\/.
     ''')
+
     global name
     name = input("\n\nAhoy Matey!\n\nPlease enter your name to continue:\n\n")
+
     while len(name) == 0:
         name = input("Oops, you can't leave this section blank:\n\n")
     welcome(name)
@@ -166,6 +171,7 @@ def main():
     start_game()
     p_score = 0
     c_score = 0
+
     while p_score < 5 and c_score < 5:
         print(f"{name}'s score is {p_score}")
         print(f"Computer's score is {c_score}")
@@ -191,7 +197,7 @@ def main():
         print(f"{name}'s score is {p_score}")
         print(f"Computer's score is {c_score}")
         print("\nIt's a draw, how unlikely!\n")
-        
+
     elif p_score == 5:
         print(f"\n\n{name}'s Board\n")
         print_board(player_board)

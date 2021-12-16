@@ -139,9 +139,34 @@ Testing ship_placement()
 
 <img src="./docs/ship-placement-function.png">
 
+Testing guess_row()
+
+<img src="./docs/guess-row-function.png">
+
+Testing guess_col()
+
+<img src="./docs/guess-col-function.png">
+
+Testing guess_check()
+
+<img src="./docs/guess-check-function.png">
+
+Testing computer_guess()
+
+<img src="./docs/computer-guess-function.png">
+
+Testing computer_check()
+
+<img src="./docs/computer-check-function.png">
+
 Testing start_game()
 
 <img src="./docs/start-game-function.png">
+
+Testing main()
+
+<img src="./docs/main-game-1.png">
+<img src="./docs/main-game-2.png">
 
 <br>
 <br>
