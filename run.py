@@ -40,12 +40,11 @@ def ship_placement(board):
     """
     ships = 0
     while ships < 5:
-        ship_row, ship_column = randint(0, 5), randint(0, 5)
+        ship_row, ship_col = randint(0, 5), randint(0, 5)
 
-        if board[ship_row][ship_column] != "O":
-            board[ship_row][ship_column] = "O"
+        if board[ship_row][ship_col] != "O":
+            board[ship_row][ship_col] = "O"
             ships += 1
-            print(ships)
 
 
 def guess_row():
@@ -71,80 +70,84 @@ def guess_col():
     """
     Player column guess
     """
-    global column
+    global col
 
     try:
-        column = int(input("Please enter a column number:\n"))
-        while column < 0 or column > 5:
+        col = int(input("Please enter a column number:\n"))
+        while col < 0 or col > 5:
             print("Oops, please choose a column between 0 and 5!")
-            column = int(input("Please enter a column number:\n"))
+            col = int(input("Please enter a column number:\n"))
 
     except ValueError:
         print("Please enter a valid number!")
         guess_col()
 
-    return column
+    return col
 
 
 def guess_check():
     """
     Function to validate player guesses
     """
-    row, column = guess_row(), guess_col()
-    print(f"You chose the co-ordinates ({row}, {column})")
+    row, col = guess_row(), guess_col()
+    print(f"You chose the co-ordinates ({row}, {col})\n")
 
-    if computer_board[row][column] == "#":
-        print("Oops, you've already guessed those co-ordinates!")
+    if computer_board[row][col] == "#" or computer_board[row][col] == "X":
+        print(f'''Oh {name}, you've already guessed those co-ordinates.
+You've missed your turn!
+        ''')
+        return False
 
-    elif hidden_computer_board[row][column] == "O":
+    elif hidden_computer_board[row][col] == "O":
         print("Congratulations, it's a direct hit!")
-        computer_board[row][column] = "X"
+        computer_board[row][col] = "X"
+        return True
 
     else:
         print("Sorry, you missed this time.\nPlease try again.")
-        computer_board[row][column] = "#"
+        computer_board[row][col] = "#"
+        return False
 
 
 def computer_guess():
     """
     Function to generate random numbers for computer guess
     """
-    guess_row, guess_column = randint(0, 5), randint(0, 5)
-    return guess_row, guess_column
+    guess_row, guess_col = randint(0, 5), randint(0, 5)
+    return guess_row, guess_col
 
 
 def computer_check():
     """
     Function to validate player guesses
     """
-    row, column = computer_guess()
+    row, col = computer_guess()
 
-    if player_board[row][column] == "#":
+    if player_board[row][col] == "#" or player_board[row][col] == "X":
         computer_guess()
 
-    elif player_board[row][column] == "O":
+    elif player_board[row][col] == "O":
         print("Computer hit!")
-        player_board[row][column] = "X"
+        player_board[row][col] = "X"
+        return True
 
     else:
-        print("Computer missed!")
-        player_board[row][column] = "#"
+        print("Computer missed!\n")
+        player_board[row][col] = "#"
+        return False
 
 
-# def increment_score(board):
+# def increment_score(val):
 #     """
 #     Function to increment the score by 1 each time a ship is hit
 #     """
-#     player_score = 0
-#     computer_score = 0
-#     for row in board:
-#         for column in row:
-#             if column == "X":
-#                 player_score += 1
-#                 computer_score += 1
-#     print(f"You've hit {player_score} out of 5 battleships")
-#     print(f"Computer has hit {computer_score} battleships")
-#     return player_score, computer_score
+#     if val == "p":
+#         p_score += 1
+
+#     else:
+#         c_score += 1
+#     print(f"You've hit {p_score} out of 5 battleships")
+#     print(f"Computer has hit {c_score} battleships")
 
 
 def start_game():
@@ -155,16 +158,17 @@ def start_game():
     ship_placement(player_board)
     ship_placement(hidden_computer_board)
     print('''
-__________.........__    __  .__                .__    .__ .............
+__________.........__    __  .__               .__    .__ .............
 \______   \_____ _/  |__/  |_|  |  ____   _____|  |__ |__|_____  ______
  |    |  _/\__  \\   __\   __\   |_/ __ \ /  ___/  |  \|  \____ \/  ___/
  |    |   \ / __ \|  |  |  | |  |_\  ___/ \___ \|   Y  \  |  |_> >___ \.
  |______  /(____  /__|  |__| |____/\___  >____  >___|  /__|   __/____  >
         \/      \/                     \/     \/     \/   |__|.......\/.
     ''')
-    name = input("\n\nAhoy Matey!\n\nPlease enter your name to continue:\n")
+    global name
+    name = input("\n\nAhoy Matey!\n\nPlease enter your name to continue:\n\n")
     while len(name) == 0:
-        name = input("\n\nOops, you can't leave this section blank:\n")
+        name = input("Oops, you can't leave this section blank:\n\n")
     welcome(name)
 
 
@@ -173,17 +177,23 @@ def main():
     This is the main function for starting the game
     """
     start_game()
-    score = 5
-    while score < 6:
-        print("Please choose co-ordinates between 0 and 5")
-        print("\n\nPlayer Board\n")
+    p_score = 0
+    c_score = 0
+    while p_score < 5 and c_score < 5:
+        print(f"{name}'s score is {p_score}")
+        print(f"Computer's score is {c_score}")
+        print(f"\n\n{name}'s Board\n")
         print_board(player_board)
         print("\n\nComputer Board\n")
         print_board(computer_board)
         print("\n")
+        print("Please choose co-ordinates between 0 and 5\n")
 
-        guess_check()
-        computer_check()
+        if guess_check():
+            p_score += 1
+
+        if computer_check():
+            c_score += 1
 
         # if increment_score(computer_board) == 5:
         #     print("Congratulations! You sunk all the Battleships!")
