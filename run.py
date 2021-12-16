@@ -44,7 +44,8 @@ def ship_placement(board):
 
         if board[ship_row][ship_column] != "O":
             board[ship_row][ship_column] = "O"
-            ships = ships+1
+            ships += 1
+            print(ships)
 
 
 def guess_row():
