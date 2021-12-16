@@ -117,6 +117,8 @@ PYTHON: No errors were returned when passing through the official Pep8online lin
 
 ### Feature Function
 
+Testing has been done using both [PythonTutor](https://pythontutor.com/visualize.html#mode=edit) and print() to verify and debug my code
+
 This is the random module that has been imported for use in generating random numbers for board creation and computer guess
 
 <img src="./docs/random-module.png">
