@@ -182,7 +182,7 @@ This function generates a random number to be used as the computer guess. No bug
 
 Testing computer_check():
 
-
+This function is similar to the guess_check function but if the computer has already guessed co-ordinates and missed, or has already hit the co-ordinates, the if statement calls computer_check again until a valid set of co-ordinates has been found. The rest of this function works in the same way as the guess_check function but increments the computer score (c_score in main() function) by 1.
 
 <img src="./docs/computer-check-function.png">
 
