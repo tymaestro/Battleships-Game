@@ -45,7 +45,7 @@ def ship_placement(board):
 
 def guess_row():
     """
-    Player guesses
+    Player row guess
     """
     global row
     try:
@@ -62,6 +62,9 @@ def guess_row():
 
 
 def guess_col():
+    """
+    Player column guess
+    """
     global column
     try:
         column = int(input("Please enter a column number:\n"))

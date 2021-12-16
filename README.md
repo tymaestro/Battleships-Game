@@ -251,7 +251,7 @@ Code institute for the deployment terminal and general README structure
 
 [Wikipedia](https://en.wikipedia.org/wiki/Battleship_(game)) for a general overview of Battleships and how to play
 
-Partial testing was done using [PythonTutor](https://pythontutor.com/visualize.html#mode=edit)
+Part of my testing was done using [PythonTutor](https://pythontutor.com/visualize.html#mode=edit)
 
 
 
