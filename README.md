@@ -1,6 +1,6 @@
 # Battleships Game
 <br>
-ADD SCREENSHOT
+<img src="./docs/battleships-image.png">
 <br>
 <br>
 Battleships is a strategy guessing game that can be played against the computer or between two players. This version will be played against the computer
@@ -282,6 +282,6 @@ Part of my testing was done using [PythonTutor](https://pythontutor.com/visualiz
 
 ## Acknowledgements
 
-Thank you to my mentor who gave me very helpful feedback and was very encouraging during our mentor sessions.
+A very big thank you to my mentor who gave me very helpful feedback and was very encouraging during our mentor sessions.
 
 Also, a big thank you to the Slack community over the course of this entire module.
