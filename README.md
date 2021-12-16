@@ -73,7 +73,9 @@ Here we can see that the player score and computer score is incremented and the 
 <img src="./docs/score-incrementation.png">
 <br>
 <br>
-Once either the player or the computer has hit all 5 ships, the program is complete and the appropriate winning message is displayed
+Once either the player or the computer has hit all 5 ships, the appropriate winning message is displayed and the program is complete
+
+Using the Run Program button in the Code Institute mock terminal, we can restart the game
 <br>
 <br>
 <img src="./docs/end-game.png">
@@ -111,27 +113,17 @@ PYTHON: No errors were returned when passing through the official [Pep8](http://
 
 <img src="./docs/pep8-screenshot.png">
 
-### Bugs
-
-#### Solved Bugs
-<br>
-
-### Remaining Bugs
-<br>
-<br>
-
 <hr>
-<br>
+
+### Testing and debugging code
 
 <br>
 <br>
-
-### Feature Function
 
 Testing has been done using both [PythonTutor](https://pythontutor.com/visualize.html#mode=edit) and print() to verify and debug my code
+<br>
+<br>
 
-<br>
-<br>
 Here I have displayed each function in my code. These are the nuts and bolts of the game and a view of what these functions look like during game play can be found in the features section of this README file. This can assist in a more visual explanation of these functions.
 <br>
 <br>
@@ -147,6 +139,8 @@ Through the use of list comprehension, I have iterated through range(6) for x an
 <img src="./docs/create-board-function.png">
 
 Testing print_board():
+
+This function 
 
 <img src="./docs/print-board-function.png">
 
@@ -186,6 +180,12 @@ Testing main():
 
 <img src="./docs/main-game-1.png">
 <img src="./docs/main-game-2.png">
+
+<br>
+This if statement ensures that the main() function is the first function called
+<br>
+
+<img src="./docs/if-name-statement.png">
 
 <br>
 <br>
