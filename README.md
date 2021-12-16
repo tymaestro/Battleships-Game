@@ -3,10 +3,23 @@
 ADD SCREENSHOT
 <br>
 <br>
-Battleships is a strategy guessing game
+Battleships is a strategy guessing game that can be played against the computer or between two players. This version will be played against the computer
+
+Battleships is accessible to, and can be enjoyable, for all age groups but requires a good strategy to be played well. Anyone who loves a challenege will enjoy this game
 
 ## How to play
 <br>
+This version of Battleships will be played on two 6x6 grids. One for the player and one for the computer
+
+The aim of the game is to sink all of the opponent's battleships before they sink all of yours
+
+At the start of the game you will be asked to input your name
+
+Then, you will input your co-ordinates (row followed by column) and press enter to check if you have hit one of the computer's ships
+
+Depending on the result, both your board and the computer's board will be updated with the position of your respective guesses
+
+This will repeat until there is a winner!
 
 
 ## Features
@@ -98,13 +111,6 @@ PYTHON: No errors were returned when passing through the official Pep8online lin
 
 <br>
 <br>
-
-
-
-### Responsivity
-<br>
-
-
 
 ### Feature Function
 
@@ -212,6 +218,7 @@ The live link can be found here -
 
 ## Credits
 <br>
+
 Code institute for the deployment terminal and general README structure
 
 [Wikipedia](https://en.wikipedia.org/wiki/Battleship_(game))
