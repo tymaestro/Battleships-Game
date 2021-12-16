@@ -32,6 +32,7 @@ def welcome(player):
     print("-" * 35)
     print(f"Welcome to Battleships {player}!")
     print("-" * 35)
+    print("O = ship location, X = HIT!, # = MISS!\n")
 
 
 def ship_placement(board):

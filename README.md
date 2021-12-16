@@ -28,25 +28,25 @@ This will repeat until there is a winner!
 ## Features
 <br>
 
-<img src="./docs/battleships-image.png">
+<img src="./docs/terminal-opening.png">
 <br>
 <br>
-<img src="./docs/battleships-image.png">
+<img src="./docs/coord-miss.png">
 <br>
 <br>
-<img src="./docs/battleships-image.png">
+<img src="./docs/coord-same.png">
 <br>
 <br>
-<img src="./docs/battleships-image.png">
+<img src="./docs/validation-sample.png">
 <br>
 <br>
-<img src="./docs/battleships-image.png">
+<img src="./docs/computer-hit.png">
 <br>
 <br>
-<img src="./docs/battleships-image.png">
+<img src="./docs/score-incrementation.png">
 <br>
 <br>
-<img src="./docs/battleships-image.png">
+<img src="./docs/end-game.png">
 
 <br>
 <br>
