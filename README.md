@@ -97,6 +97,13 @@ PYTHON
 
 [Heroku](https://www.heroku.com/home) was used to deploy our final project.
 
+## Flowchart
+<br>
+Here is my flowchart which demonstrates the logic of the game.
+<br>
+<br>
+
+<img src="./docs/flowchart.png">
 
 ## Testing
 <br>
