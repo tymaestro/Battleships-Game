@@ -1,5 +1,9 @@
 # Battleships Game
 <br>
+
+The live link can be found here: [Battleships](https://battleships-game22.herokuapp.com/)
+<br>
+
 Battleships is a strategy guessing game that can be played against the computer or between two players. This version will be played against the computer.
 <br>
 <br>
@@ -10,8 +14,6 @@ Battleships is accessible to, and can be enjoyable, for all age groups but requi
 <br>
 
 This is a welcoming opening for players of Battleships. It personalises the welcome message depending on the name input provided. There is also error handling in case this field is left blank.
-
-The live link can be found here: [Battleships](https://battleships-game22.herokuapp.com/)
 
 ## How to play
 <br>
